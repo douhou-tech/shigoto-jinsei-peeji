@@ -20,6 +20,10 @@ body {
   overflow-x: hidden;
 }
 
+p {
+  white-space: pre-wrap;
+}
+
 body {
   min-height: 100%;
   display: flex;
