@@ -1,5 +1,4 @@
 .page {
-  composes: amoebaLinearGradientPage;
   --background: #ffffff;
   --foreground: #fff;
 
@@ -28,7 +27,7 @@
   align-items: flex-start;
   justify-content: center;
   font-family: var(--font-geist-sans);
-  background-color: var(--background);
+  background: transparent;
 }
 
 .amoebaConicGradient {
@@ -56,14 +55,15 @@
 
 .amoebaLinearGradientPage {
   background: linear-gradient(
-    to top, 
+    in oklch to top,
     var(--accent-green-glass) 0%, 
     var(--accent-purple-glass) 25%, 
     var(--accent-pink-glass) 45%,
-    white 100%
+    rgb(255, 255, 255, 1) 100%
   );
   -webkit-backdrop-filter: blur(12px);
   backdrop-filter: blur(12px);
+  background-clip: padding-box;
 }
 
 .amoebaLinearGradient {
@@ -108,6 +108,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 25px;
+  margin: 24px;
   margin-bottom: 50px;
 }
 
@@ -121,7 +122,7 @@
   composes: amoebaConicGradientCircle;
   width: 100px;
   height: 100px;
-  margin: 12px;
+  margin-right: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -173,15 +174,15 @@
   display: flex;
   flex-direction: row;
   gap: 25px;
+  background: transparent;
 }
 
 .navigation a {
+  color: var(--text-primary);
   border-radius: 25px;
   padding: 10px;
   font-weight: 500;
   background: transparent;
-  
-  backdrop-filter: blur(12px);
 }
 
 .intro {

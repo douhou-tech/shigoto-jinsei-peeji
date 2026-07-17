@@ -3,6 +3,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import { useState, useEffect } from "react"
+import BackgroundShader from "./background";
 
 const aboutKeywords = ["computation", "organic", "development", "amoeboid", "fluid adaptability", "first principles", "zero-bloat", "shapeless logic", "robust systems"]
 const aboutText = "Computation is organic, and my development style reflects that. Guided by an amoeboid philosophy, I avoid rigid templates in favor of fluid adaptability. I start from first principles the bare metal and build upward through the vertical stack. By understanding how data behaves at the lowest levels, I can mold custom structures that expand and contract as requirements shift. It is a philosophy of zero-bloat, rapid assimilation, and elegant, self-directed growth from shapeless logic to robust systems.";
@@ -65,6 +66,8 @@ export function KeywordText({ text, keywords }) {
 export default function Home() {
   return (
     <div className={styles.page}>
+      <BackgroundShader />
+
       <header className={styles.header}>
         <div className={styles.avatar}>
           <div className={styles.avatarIcon}>
