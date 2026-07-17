@@ -77,11 +77,11 @@ export default function Home() {
             <img src={githubBase64} />
           </div>
         </div>
-        <navigation className={styles.navigation}>
+        <nav className={styles.navigation}>
           <a>About</a>
           <a>Projects</a>
           <a>Contact Me</a>
-        </navigation>
+        </nav>
       </header>
       <main className={styles.main}>
         <h1>Welcome to the Amoebic Engineer</h1>
